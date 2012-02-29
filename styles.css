@@ -1,0 +1,102 @@
+#course-management {width:100%;height:100%;position:relative;}
+
+#course-details {display:none;margin:0;padding:0;vertical-align: top;}
+#course-details .course-details-wrap {height:600px;overflow:auto;background-color:#FFF;border: 1px solid #BBB;border-left-width: 0}
+#course-details .course-details-content {padding:1em;}
+
+
+#course-management.showing-course-details #course-details {width:30%;display:inline-block;}
+#course-management.showing-course-details #course-listing {width:50%;}
+
+#category-listing {width:20%;display:inline-block;margin:0;padding:0;overflow:auto;vertical-align: top;}
+#category-listing h3.heading {margin:0;font-size:100%;border-bottom:1px solid #CCC;padding:0.3em 1em 0.2em;vertical-align:top;font-weight:normal;}
+#category-listing .category-listing-wrap {border:1px solid #BBB;background-color:#FFF;margin:0;height:600px;border-right-width:0;}
+
+#category-listing .category-item > .subcategory-listing {display:none;}
+#category-listing .category-item.expanded > .subcategory-listing {display:block;margin-left:8px;}
+#category-listing .category-item {background:transparent url([[pix:tool_coursemanagement|empty]]) no-repeat 0 0.4em;);padding:0.2em 0 0.2em 1.5em;}
+#category-listing .category-item .category-item {margin-left:0;}
+#category-listing .category-item.has-subcategories {background-image:url([[pix:tool_coursemanagement|collapsed]]);}
+#category-listing .category-item.has-subcategories.expanded {background-image:url([[pix:tool_coursemanagement|expanded]]);}
+#category-listing .category-item.has-courses > .category-info {color:#0012a3;cursor:pointer;}
+#category-listing .category-item .category-info.dragging-over {background-color:#E3FFE3;}
+
+#category-listing .category-item.viewing-courses > .category-info {font-weight: bold;color:blue;}
+
+#course-listing {width:80%;display:inline-block;margin:0;padding:0;vertical-align: top;}
+#course-listing .course-listing-wrap {height:600px;overflow:auto;background-color:#FFF;border: 1px solid #BBB;}
+#course-listing .course-listing-wrap > .courses {height:550px;overflow:auto;}
+#course-details h3.heading {margin:0;font-size:100%;border-bottom:1px solid #CCC;padding:0.3em 1em 0.2em;vertical-align:top;font-weight:normal;}
+
+#course-listing .headings {border-bottom:1px solid #CCC;}
+#course-listing .course-info {display:inline-block;padding:0.3em 1em 0.2em;vertical-align:top;cursor:pointer;}
+
+
+
+#course-listing .course-actions {border-right:1px solid #CCC;padding:0.3em 0.2em 0.2em;font-size:90%;}
+#course-listing .course-actions input {vertical-align: center;font-size:90%;}
+#course-listing .course-idnumber {width:100px;border-right:1px solid #CCC;}
+#course-listing .course-shortname {width:100px;border-right:1px solid #CCC;overflow: hidden;white-space:nowrap;}
+
+#course-listing .course-viewmore {float:right;line-height:1em;padding:0.2em 1em;cursor:pointer;}
+
+#course-listing .createnewcourse {margin:0.3em 2.5em 0.2em;}
+
+.course-manager-resources .loading-lightbox {position:fixed;top:0;left:0;width:100%;height:100%;background:#FFF url([[pix:moodle|i/loading]]) no-repeat 50% 50%;opacity:0.8;display:none;}
+.course-manager-resources .loading-lightbox.in-use {display: block;}
+
+#course-listing .course-item.being-dragged {background-color:#E9FFE9;border-top:1px solid #BBB;border-bottom:1px solid #BBB;}
+#course-listing .course-item.being-dragged:nth-child(even) {background-color:#E3FFE3;}
+#course-listing .course-item.being-dragged .course-actions {background-color:#CCC;}
+#course-listing .course-item.being-dragged .course-actions input {visibility: hidden;}
+
+.drag-started .course-item {opacity:0.5;}
+.drag-started .course-item.being-dragged {opacity:1;}
+
+#course-listing .course-item:hover {background-color:#ecf3f6;}
+#course-listing .course-item:hover:nth-child(even) {background-color:#dff0f6;}
+#course-listing .course-item:last-child {border-bottom:1px solid #EEE;}
+
+#course-listing .course-item {background-color:#f5fdff;}
+#course-listing .course-item:nth-child(even) {background-color:#e8fbff;}
+
+#course-listing .course-item.currently-viewing,
+#course-listing .course-item.currently-viewing:nth-child(even)  {background-color:#b6e9f2;}
+#course-listing .course-item.currently-viewing .course-viewmore {background-color:#8acfdc;}
+
+
+#course-details .course-details-content h3 {border-bottom:1px solid #666;margin-top:0.5em;margin-bottom:0.5em;}
+#course-details .course-details-content h4 {margin-top:0.3em;}
+#course-details .course-details-content .summary {border:1px solid #BBB;margin-bottom:1em; padding:0.5em;}
+#course-details .course-details-content .actions {border:1px outset #BBB;background-color:#F6F6F6;margin:0.5em 0;text-align:center;}
+#course-details .course-details-content .actions .action {display:inline-block;margin:0.3em 0.5em 0.2em;}
+#course-details .course-details-content ul.sections {margin:0;padding:0;}
+#course-details .course-details-content ul.activities {margin-left:3em;}
+#course-details .course-details-content ul.sections li.section {list-style: none;}
+#course-details .course-details-content ul.activities li.activity {position:relative;margin-bottom:0.3em;}
+#course-details .course-details-content ul.activities li.activity img {position:absolute;left:-20px;}
+
+.create-course-overlay .moodle-dialogue-bd {padding:0;}
+.create-course-overlay .errors {color:#a00;margin:0.3em 1em; font-weight:bold;text-align:center;}
+.create-course-overlay .form-input {padding:0.3em 1em;}
+.create-course-overlay .form-input:nth-child(even) {background-color:#F6F6F6;}
+.create-course-overlay .form-input label {display:block;font-weight:bold;}
+.create-course-overlay .form-input select,
+.create-course-overlay .form-input input {margin-left:10%;}
+.create-course-overlay .form-input-fullname input {width:85%;}
+.create-course-overlay .form-input-summary textarea {margin-left:10%;width:85%;height:5em;}
+
+#course-details .course-details-content .actions {border-radius:5px;-moz-border-radius:5px; -webkit-border-radius: 5px;}
+
+#category-listing h3.heading,
+#course-details h3.heading,
+#course-listing .headings {
+    background-image: linear-gradient(bottom, rgb(222,224,217) 13%, rgb(255,255,255) 66%, rgb(245,245,245) 68%);
+    background-image: -o-linear-gradient(bottom, rgb(222,224,217) 13%, rgb(255,255,255) 66%, rgb(245,245,245) 68%);
+    background-image: -moz-linear-gradient(bottom, rgb(222,224,217) 13%, rgb(255,255,255) 66%, rgb(245,245,245) 68%);
+    background-image: -webkit-linear-gradient(bottom, rgb(222,224,217) 13%, rgb(255,255,255) 66%, rgb(245,245,245) 68%);
+    background-image: -ms-linear-gradient(bottom, rgb(222,224,217) 13%, rgb(255,255,255) 66%, rgb(245,245,245) 68%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.13, rgb(222,224,217)),color-stop(0.66, rgb(255,255,255)),color-stop(0.68, rgb(245,245,245)));}
+}
+
+#course-listing .course-item.being-dragged {-moz-box-shadow: 2px 2px 4px #EEE;-webkit-box-shadow: 2px 2px 4px #EEE;box-shadow: 2px 2px 4px #EEE;}
