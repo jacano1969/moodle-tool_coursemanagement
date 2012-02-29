@@ -32,6 +32,15 @@ $action = required_param('action', PARAM_ALPHA);
 require_login();
 require_sesskey();
 
+/**
+ * This check is here because proper capability checks are not yet in place for
+ * all actions.
+ * To help prevent abuse if people try this tool out I've added this check to make
+ * sure that only users with site config can try this tool.
+ * @todo Fix capability checks and remove this check
+ */
+require_capability('moodle/site:config', get_system_context());
+
 $PAGE->set_context(get_system_context());
 $PAGE->set_url('/admin/tool/coursemanagement/ajax.php');
 

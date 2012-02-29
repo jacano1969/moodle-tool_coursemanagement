@@ -40,6 +40,15 @@ $PAGE->set_context($context);
 require_login();
 require_capability('moodle/category:manage', $context);
 
+/**
+ * This check is here because proper capability checks are not yet in place for
+ * all actions.
+ * To help prevent abuse if people try this tool out I've added this check to make
+ * sure that only users with site config can try this tool.
+ * @todo Fix capability checks and remove this check
+ */
+require_capability('moodle/site:config', get_system_context());
+
 list($totalrootcategories, $rootcategories) = coursemanagement_category::get_root_categories($page);
 
 $PAGE->set_title(format_string($PAGE->course->fullname, true, $PAGE->context));
