@@ -1,14 +1,29 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+defined('MOODLE_INTERNAL') || die();
 
 /**
+ * Classes and functions required by this tool
  *
- * @global moodle_database $DB
+ * @package    tool
+ * @subpackage coursemanagement
+ * @copyright  2012 Sam Hemelryk
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-function coursemanagement_get_root_categories() {
-    global $DB;
-
-    
-}
 
 class coursemanagement_category {
 
@@ -427,7 +442,6 @@ class coursemanagement_course {
             $return['actions'] = $this->get_actions();
 
             $modinfo = get_fast_modinfo($this->courserecord);
-            //$return['debug'] = print_r($modinfo, true);
 
             $return['sections'] = array();
             $cms = $modinfo->get_cms();

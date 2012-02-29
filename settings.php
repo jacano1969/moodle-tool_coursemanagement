@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Lang import
+ * Course management settings
  *
  * @package    tool
  * @subpackage coursemanagement
