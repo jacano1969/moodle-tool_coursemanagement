@@ -28,3 +28,4 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version   = 2012022800;
 $plugin->requires  = 2011120500;
 $plugin->component = 'tool_coursemanagement'; // Full name of the plugin (used for diagnostics)
+$plugin->maturity  = MATURITY_ALPHA;

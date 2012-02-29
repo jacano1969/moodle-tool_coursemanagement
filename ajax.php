@@ -55,9 +55,11 @@ try {
             $outcome['success'] = 1;
             $outcome['error'] = '';
             $outcome['subcategories'] = new stdClass;
+            $count = 0;
             foreach ($category->get_subcategories() as $subcategory) {
                 if ($subcategory->can_view()) {
-                    $outcome['subcategories']->{$subcategory->get_id()} = $subcategory->to_json();
+                    $outcome['subcategories']->{$count} = $subcategory->to_json();
+                    $count++;
                 }
             }
             break;
@@ -69,9 +71,11 @@ try {
             $outcome['success'] = 1;
             $outcome['error'] = '';
             $outcome['courses'] = new stdClass;
+            $count = 0;
             foreach ($category->get_courses() as $course) {
                 if ($course->can_view()) {
-                    $outcome['courses']->{$course->get_id()} = $course->to_json();
+                    $outcome['courses']->{$count} = $course->to_json();
+                    $count++;
                 }
             }
             break;
