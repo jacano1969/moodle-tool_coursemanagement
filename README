@@ -1,0 +1,15 @@
+Course and category management tool
+
+This tool has been created to replace the course and category management pages within Moodle.
+Its focus is to separate out the management tasks and simplfy them through both a better interface and JavaScript enhancements such as AJAX loading and drag and drop functionality.
+
+To install this tool:
+1. Download the tool from github: https://github.com/samhemelryk/moodle-tool_coursemanagement/zipball/master
+2. Unzip the tool and move it to ./admin/tool/coursemanagement
+3. Check that you have ./admin/tool/coursemanagement/index.php (if you don't things are in the wrong place)
+4. Visit your site and log in as an admin to trigger the installation
+5. In the settings navigation browse to Site Administration > Courses > Course and category management
+
+Please note this tool is in an early stage of development and is just a prototype.
+To ensure better security only users with the moodle/site:config may use it until proper security checks have been implemented.
+
