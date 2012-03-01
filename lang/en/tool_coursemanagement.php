@@ -38,4 +38,5 @@ $string['errorajaxjsonparse'] = 'Failed to parse the JSON response from the AJAX
 $string['errorajaxunknown'] = 'Unknown AJAX error has occured';
 $string['loadmorecategories'] = 'Load more categories...';
 $string['pluginname'] = 'Course and category management';
+$string['sections'] = 'Sections';
 $string['submit'] = 'Submit';

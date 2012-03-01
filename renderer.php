@@ -43,6 +43,7 @@ class tool_coursemanagement_renderer extends plugin_renderer_base {
             'coursesummary',
             'courseformat',
             'submit',
+            'sections'
         ), 'tool_coursemanagement');
 
         $config = new stdClass;
