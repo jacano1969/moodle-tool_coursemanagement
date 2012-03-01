@@ -294,7 +294,13 @@ class coursemanagement_category {
     }
 
     public function can_view() {
-        return $this->get_visible() || has_capability('moodle/category:viewhiddencategories', context_coursecat::instance($this->get_parent()));
+        $parent = $this->get_parent();
+        if ($parent > 0) {
+            $context = context_coursecat::instance($this->get_parent());
+        } else {
+            $context = get_system_context();
+        }
+        return $this->get_visible() || has_capability('moodle/category:viewhiddencategories', $context);
     }
 
     public function can_reordercourses() {
